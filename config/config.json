@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "full-width-container-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fullWidthContainer/FullWidthContainerWebPart.js",
+          "manifest": "./src/webparts/fullWidthContainer/FullWidthContainerWebPart.manifest.json"
+        }
+      ]
+    },
+    "dynamic-filter-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dynamicFilter/DynamicFilterWebPart.js",
+          "manifest": "./src/webparts/dynamicFilter/DynamicFilterWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FullWidthContainerWebPartStrings": "lib/webparts/fullWidthContainer/loc/{locale}.js",
+    "DynamicFilterWebPartStrings": "lib/webparts/dynamicFilter/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

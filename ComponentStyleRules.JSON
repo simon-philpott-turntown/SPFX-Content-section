@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "designSystem": "Microsoft Fluent UI 2 (https://fluent2.microsoft.design/)",
+  "tokens": {
+    "colors": {
+      "colorNeutralBackground1": "tokens.colorNeutralBackground1",
+      "colorNeutralBackground2": "tokens.colorNeutralBackground2",
+      "colorNeutralBackground3": "tokens.colorNeutralBackground3",
+      "colorNeutralForeground1": "tokens.colorNeutralForeground1",
+      "colorNeutralForeground2": "tokens.colorNeutralForeground2",
+      "colorNeutralForeground3": "tokens.colorNeutralForeground3",
+      "colorNeutralStroke1": "tokens.colorNeutralStroke1",
+      "colorNeutralStroke2": "tokens.colorNeutralStroke2",
+      "colorBrandBackground": "tokens.colorBrandBackground",
+      "colorBrandBackground2": "tokens.colorBrandBackground2",
+      "colorBrandForeground1": "tokens.colorBrandForeground1",
+      "colorBrandStroke1": "tokens.colorBrandStroke1"
+    },
+    "effects": {
+      "shadow4": "tokens.shadow4",
+      "shadow8": "tokens.shadow8",
+      "borderRadii": {
+        "small": "tokens.borderRadiusSmall (4px)",
+        "medium": "tokens.borderRadiusMedium (6px)",
+        "large": "tokens.borderRadiusLarge (8px)",
+        "circular": "tokens.borderRadiusCircular (9999px)"
+      },
+      "transitions": {
+        "standard": "200ms cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    }
+  },
+  "components": {
+    "FluentProvider": {
+      "classes": ["FluentProvider"],
+      "aesthetic": "Root theme provider inheriting active SharePoint Online site palette and dark/light mode dynamically."
+    },
+    "TabList": {
+      "classes": ["TabList", "Tab"],
+      "aesthetic": "Fluent 2 TabList with subtle appearance, active indicator line, and small status Badge."
+    },
+    "Accordion": {
+      "classes": ["Accordion", "AccordionItem", "AccordionHeader", "AccordionPanel"],
+      "aesthetic": "Native Fluent 2 collapsible panels with expandIconPosition='end' and toolbar buttons."
+    },
+    "Card": {
+      "classes": ["Card", "CardHeader", "CardFooter"],
+      "aesthetic": "Elevated Fluent 2 card with subtle border, shadow hover lift, icon box, independent background color (with WCAG adaptive contrast), dynamic physical live resize preview badge (📐 cols × rows), and SharePoint native Move Web Part isolation."
+    },
+    "MetricCard": {
+      "classes": ["Card", "Title1", "Badge"],
+      "aesthetic": "High-contrast British financial metrics formatted in GBP (£) with trend badges."
+    },
+    "CardEditDialog": {
+      "classes": ["Dialog", "DialogSurface", "DialogTitle", "DialogBody", "Dropdown", "Input", "Textarea"],
+      "aesthetic": "Elevated modal dialog with shadow28, responsive form layout, icon picker, and action buttons."
+    },
+    "FloatingTextToolbar": {
+      "classes": ["Button", "Dropdown", "Divider", "Popover", "PopoverSurface", "fui-floating-toolbar"],
+      "aesthetic": "Fluent UI 2 Popover portal anchored to active editable text target with positioning position='above', align='start', and offset=8, escaping card stacking contexts and grid cell boundaries with shadow28 elevation, colorNeutralStroke1 border, tokens.borderRadiusMedium corners, mousedown blur prevention, site theme palette swatches, font selector, highlight background colors, and active formatting indicators."
+    },
+    "FluentIconPicker": {
+      "classes": ["Dialog", "DialogSurface", "DialogTitle", "Input", "Badge", "Button"],
+      "aesthetic": "Visual icon selection modal featuring instant search, categorised pill filters, and unified icon set with hover animations."
+    },
+    "RichTextEditable": {
+      "classes": ["contentEditable", "h1", "h2", "h3", "p", "FloatingTextToolbar"],
+      "aesthetic": "Theme-aware inline WYSIWYG rich text block inheriting site font families and theme colors with real-time selection-anchored ribbon. Supports dual-mode formatting: modifies highlighted selection when text is selected, or formats the entire text block (family, color, background, alignment, lists) when no text is selected."
+    },
+    "InsertionBar": {
+      "classes": ["InsertionBar", "AddRegular"],
+      "aesthetic": "Hover-activated horizontal line with centered circular (+) add button modeled after SharePoint section adder."
+    },
+    "ToolboxModal": {
+      "classes": ["Dialog", "DialogSurface", "DialogTitle", "DialogBody"],
+      "aesthetic": "Grid of SharePoint authoring tools (Button, CTA, Divider, Editorial, Hero, Image, Video, Live Data, Term Store)."
+    },
+    "TermStorePicker": {
+      "classes": ["TagGroup", "Tag", "Input", "Button", "Skeleton", "SkeletonItem"],
+      "aesthetic": "Managed metadata taxonomy browser with rounded tag pills, Skeleton shimmer during fetch, and search filtering."
+    },
+    "LiveDataRenderer": {
+      "classes": ["Badge", "Spinner", "Button", "Skeleton", "SkeletonItem"],
+      "aesthetic": "Real-time API dynamic value display with live connectivity badge, Skeleton shimmer during loading, and refresh trigger."
+    },
+    "Skeleton": {
+      "classes": ["Skeleton", "SkeletonItem"],
+      "aesthetic": "Fluent UI 2 pulse shimmer animation preventing layout shifts during asynchronous data fetches."
+    },
+    "ToastNotification": {
+      "classes": ["Toast", "ToastTitle", "ToastBody", "Toaster"],
+      "aesthetic": "Layered surface toast notification with accent border-left, drop shadow28, and auto-dismiss feedback."
+    },
+    "CardTagsCollapsible": {
+      "classes": ["miniTagsTile", "miniTagsContainer", "miniTagsPanel", "TagRegular", "ChevronRightRegular", "ChevronDownRegular"],
+      "aesthetic": "Mini collapsible tile with tag icon, count badge, and chevron. Collapsed by default, expanding to reveal managed metadata and standard tag pills."
+    },
+    "BrandColorPickerPopover": {
+      "classes": ["Popover", "PopoverTrigger", "PopoverSurface", "Button", "Input", "Divider"],
+      "aesthetic": "Fluent UI 2 visual popup colour picker featuring contextual Default Option swatches displaying the accurate default colour for each target item (Transparent for web part/section canvas, #0090DC Brand Cyan for glyphs, #CCE9F8 Soft Tint for icon boxes, #FFFFFF for cards, #242424 for text), categorized Turner & Townsend brand palettes, active selection rings, and custom HEX input."
+    },
+    "CustomSvgIconRegistry": {
+      "classes": ["renderUnifiedIcon", "CUSTOM_SVG_ICONS", "TT_SVG_ICONS", "iconBox"],
+      "aesthetic": "Extensible corporate SVG icon registry merged with standard icons, with currentColor dynamic glyph inheritance, rounded icon background containers with toggle support, and transparent color integration across tabs, accordions, and cards."
+    },
+    "PropertyPaneIconField": {
+      "classes": ["IconFieldControl", "FluentProvider", "Button", "Subtitle2", "Caption1", "FluentIconPicker"],
+      "aesthetic": "SPFx Property Pane custom control rendering a 32x32px icon preview with title and badge, connected to the modal icon browser."
+    },
+    "SectionEditDialog": {
+      "classes": ["Dialog", "DialogSurface", "DialogTitle", "DialogBody", "Input", "Textarea", "BrandColorPickerPopover", "FluentIconPicker"],
+      "aesthetic": "Elevated Fluent UI 2 side panel with transparent non-dimming backdrop, responsive form layout, draggable resize handle, icon picker, and brand color pickers."
+    },
+    "CardItemPropertyEditor": {
+      "classes": ["Dialog", "DialogSurface", "DialogTitle", "DialogBody", "Input", "Textarea", "Dropdown", "Button", "CardItemEditor"],
+      "aesthetic": "Fluent UI 2 elevated modal dialog (width: 580px, max-width: 90vw) with shadow28, responsive contextual form inputs tailored to each of the 13 card inner item types, brand accent header, live error validation, and synchronous state commitment."
+    }
+  }
+}

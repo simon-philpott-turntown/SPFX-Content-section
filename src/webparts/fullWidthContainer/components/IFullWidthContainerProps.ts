@@ -1,0 +1,51 @@
+/**
+ * @file IFullWidthContainerProps.ts
+ * @description Props contract for the FullWidthContainer root React component.
+ */
+
+import { IContainerSection, LayoutMode, ContainerStyle, ITermFilterConfig, ICardItem } from '../models/IContainerModels';
+
+export interface IFullWidthContainerProps {
+  title: string;
+  subtitle?: string;
+  layoutMode: LayoutMode;
+  containerStyle: ContainerStyle;
+  accentColor: string;
+  enableAnimation: boolean;
+  compactPadding: boolean;
+  showSearch: boolean;
+  searchAlignment?: 'left' | 'center' | 'right';
+  searchPlaceholder?: string;
+  onSearchPlaceholderChange?: (val: string) => void;
+  gridColumns?: number;
+  gridRows?: number;
+  cardHeightMode?: 'auto' | 'equal';
+  webPartBackgroundColor?: string;
+  sections: IContainerSection[];
+  headerContentItems?: ICardItem[];
+  onUpdateHeaderContentItems?: (items: ICardItem[]) => void;
+  termFilters?: ITermFilterConfig[];
+  onUpdateTermFilters?: (filters: ITermFilterConfig[]) => void;
+  isDarkTheme: boolean;
+  userDisplayName: string;
+  spfxTheme?: unknown;
+  isEditMode?: boolean;
+  onOpenPropertyPane?: () => void;
+  onTitleChange?: (newTitle: string) => void;
+  onSubtitleChange?: (newSubtitle: string) => void;
+  onWebPartBackgroundColorChange?: (color: string) => void;
+  onUpdateSection?: (sectionId: string, updatedFields: Partial<IContainerSection>) => void;
+  onAddSection?: () => void;
+  onDeleteSection?: (sectionId: string) => void;
+  onUpdateBlock?: (sectionId: string, blockId: string, updatedFields: Partial<import('../models/IContainerModels').IContentBlock>) => void;
+  onAddBlock?: (sectionId: string) => void;
+  onDeleteBlock?: (sectionId: string, blockId: string) => void;
+  onEditBlockProperties?: (sectionIndex: number, blockIndex: number) => void;
+  onSaveBackupToLibrary?: (folderType: 'Backups' | 'Templates') => Promise<void>;
+  onRestoreFromLibrary?: () => void;
+  lastBackupMessage?: string;
+  assetPickerService?: import('../services/IAssetPickerService').IAssetPickerService;
+  userProfileDetails?: Record<string, any>;
+  userProfilePhotoUrl?: string;
+}
+
