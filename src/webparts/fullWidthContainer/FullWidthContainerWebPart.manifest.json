@@ -25,10 +25,10 @@
         "default": "Advanced"
       },
       "title": {
-        "default": "Full width dashboard"
+        "default": "Content section (Tabs, Accordion, Toggle)"
       },
       "description": {
-        "default": "Full-width responsive dashboard web part supporting tabs, accordions, and rich content cards and embeddable content"
+        "default": "Full-width and column responsive content section supporting Tabs, Accordion, and Toggle modes with rich composable cards"
       },
       "officeFabricIconFontName": "GroupedList",
       "properties": {
